@@ -1,8 +1,9 @@
 class City:
-    def __init__(self, name, latitude, longitude):
+    def __init__(self, name, latitude, longitude, duration):
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
+        self.duration = duration
 
     def distance_to(self, other_city):
         x_distance = abs(self.latitude - other_city.get_x())
@@ -17,3 +18,6 @@ class City:
 
     def get_y(self):
         return self.longitude
+    
+    def get_duration(self):
+        return self.duration
