@@ -1,5 +1,6 @@
-import City
-import Song
+from City import City
+from Song import Song
+
 class CSVParser:
     @staticmethod
     def parse_cities(file_name):
@@ -14,7 +15,8 @@ class CSVParser:
                 city_name = data[0].strip()
                 latitude = float(data[2].strip())
                 longitude = float(data[3].strip())
-                city = City(city_name, latitude, longitude)
+                duration = int(data[4].strip())
+                city = City(city_name, latitude, longitude, duration)
                 cities.append(city)
         return cities
 
